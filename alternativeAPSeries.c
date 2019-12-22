@@ -16,9 +16,9 @@ int main()
     int n,result;
     scanf("%d",&n);
     if((n%2)!=0)
-    result=AP1((n/2)+1);
+    result=AP1((n/2)+1); // odd
     else
-    result=AP2(n/2);
+    result=AP2(n/2); //even
     printf("%d",result);
     return 0;
 }

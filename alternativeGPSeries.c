@@ -14,7 +14,7 @@ int main()
 {
     int n,result;
     scanf("%d",&n);
-    if((n%2)!=0)
+    if((n%2)!=0) //if(n%2!=0)
     result=GP1((n/2)+1); //odd term gp
     else
     result=GP2((n/2)); //even term gp

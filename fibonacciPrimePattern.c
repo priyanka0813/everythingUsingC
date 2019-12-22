@@ -1,5 +1,5 @@
 /*
-given series -----  odd terms are fibonacci series starting from 1
+given series -----  odd terms are fibonacci series starting from 1 if(n%2!=0) result=fibonacci((n/2)+1)
                     and even terms are prime series  starting from 2
                     find the nth term 
 TCS 2018
@@ -26,10 +26,10 @@ int main()
 int prime(int n)
 {
     int i,j,flag=0,count=0;
-    for(i=2;i<max;i++)
+    for(i=2;i<max;i++)   //for(i=2;i<=n/2;i++)
     {
         flag=0;
-        for(j=2;j<i;j++)
+        for(j=2;j<i;j++) //for(j=2;j<=i/2;j++) for range
         {
             if(i%j==0)
             {
@@ -40,7 +40,7 @@ int prime(int n)
         }
         if(flag==0)
         {
-            if(++count==n)
+            if(++count==n) //(++count==n) 
             {
                 return i;
                 
@@ -70,3 +70,25 @@ int fibonacci(int n)
    return next;
    }
 }
+
+/*
+int fibonacci(int n)
+{
+    int first=1,second=1,next,i;
+    if(n==1)
+    return first;
+    else if(n==2)
+    return second;
+    else
+    {
+        for(i=3;i<=n;i++)
+        {
+            next=first+second;
+            first=second;
+            second=next;
+        }
+        return next;
+    }
+    
+}
+*/
